@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Clase2 = () => {
     const URL = 'https://api.thecatapi.com/v1/images/search?limit=10'
@@ -29,6 +30,7 @@ const Clase2 = () => {
 
   return (
     <div>
+        <Link to='/'><span>Ir al login</span></Link>
        {loading ? 
        <h1>Cargando gatitos 🐈...</h1> 
        :
