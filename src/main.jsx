@@ -7,9 +7,12 @@ import { BrowserRouter } from 'react-router-dom'
 import Router from './Router/Router'
 import { Provider } from 'react-redux'
 import { store } from './store/store'
+import { UserProvider } from './Context/Context'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <Provider store={store}>
-    <Router/>
-    </Provider>
+    <UserProvider>
+        <Provider store={store}>
+            <Router/>
+        </Provider>
+    </UserProvider>
 )
